@@ -1,5 +1,7 @@
 - Python 3.7.4 +
-- Uses [Instalooter](https://github.com/althonos/InstaLooter.git)
+- Libs used
+    - [Instalooter](https://github.com/althonos/InstaLooter.git)
+    - [FastAPI](https://fastapi.tiangolo.com/)
 
 # 1. Usage:
 
