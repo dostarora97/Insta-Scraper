@@ -4,9 +4,9 @@
 # Usage:
 ```
 pip install -r requirements.txt
-uvicorn main:app --reload
+python main.py
 ```
-Browse to: `localhost:8000`
+Browse to: `localhost:5000`
 
 # Note:
 - Only public accounts.

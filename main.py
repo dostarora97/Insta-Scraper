@@ -1,3 +1,5 @@
+import uvicorn
+
 from typing import Optional
 
 from fastapi import FastAPI, Request
@@ -69,3 +71,6 @@ def scrape(user: User):
             error = scraped_medias[2])
     finally:
         return scraped_user
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=5000, log_level="info", reload=True)
