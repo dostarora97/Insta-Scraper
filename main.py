@@ -72,5 +72,8 @@ def scrape(user: User):
     finally:
         return scraped_user
 
-if __name__ == "__main__":
+def run():
     uvicorn.run("main:app", host="127.0.0.1", port=5000, log_level="info", reload=True)
+
+if __name__ == "__main__":
+    run()
