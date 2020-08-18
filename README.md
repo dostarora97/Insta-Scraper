@@ -28,12 +28,19 @@ python scraper.py
 - All data is saved in dir `Insta-Scraper/data/<username>`
 
 # 3. To-Do:
+## 3.1 Backend
 - Cache System
-- Private Accounts Scrape (with Login Creds)
-- Data Download Option
-- Regular Expression Search
-- Transfer Captions through Web-Sockets
-- Caption Scrape Progress Bar
-- Select options for information to Scrape
+- Private Accounts Scrape
+- Extended Information Scrape (comments, likes, images, ..etc)
+- Web-Socket media transfer
+- Implement everything in GraphQl (specially useful for extended scrape option)
+- Download Media as zip. Use [Snappy](https://github.com/google/snappy.git) for ultra-fast zipping.
+
+## 3.2 UI
 - Add Welcome Message
-- Use graphql to provide option selection
+- Login creds form - For private accounts
+- Select options for extended Information (comments, likes, images, ..etc)
+- Media Scraping Progress Bar
+- Data Download Option (with selective download)
+- Regular Expression Search through captions
+- Show approximate Download file size
