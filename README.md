@@ -1,5 +1,5 @@
 - Python 3.7.4 +
-- Uses [Instalooter!](https://github.com/althonos/InstaLooter.git)
+- Uses [Instalooter](https://github.com/althonos/InstaLooter.git)
 
 # Usage:
 ```
