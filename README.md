@@ -35,3 +35,5 @@ python scraper.py
 - Transfer Captions through Web-Sockets
 - Caption Scrape Progress Bar
 - Select options for information to Scrape
+- Add Welcome Message
+- Use graphql to provide option selection
