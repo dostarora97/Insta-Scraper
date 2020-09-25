@@ -8,19 +8,27 @@
 ```
 git clone https://github.com/dostarora97/Insta-Scraper.git
 cd Insta-Scraper
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ## 1.1 Web UI:
+
+### 1.1.1 Local Network
 ```
-python main.py
+python3 main.py
 ```
 Browse to: `localhost:5000`
+
+### 1.1.2 Ngrok to Public URL
+```
+python3 ngrok.py
+```
+Browse to the `Public URL` displayed in console
 
 ## 1.2 CommandLine:
 ```
 cd utils
-python scraper.py
+python3 scraper.py
 ```
 
 # 2. Note:

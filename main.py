@@ -10,6 +10,8 @@ from fastapi.templating import Jinja2Templates
 
 import datetime
 from utils.scraper import Insta_Scraper
+from pathlib import Path
+import json
 
 app = FastAPI()
 
@@ -17,7 +19,9 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
-scraper = Insta_Scraper("data")
+data_path = Path("./data")
+
+scraper = Insta_Scraper(data_path)
 
 def filter_data(scraped_data: list):
     filtered_data = list()
@@ -59,6 +63,13 @@ def scrape(user: User):
 
     try:
         scraped_medias = scraper.scrape(user.username)
+        captionFilterData = filter_data(scraped_medias[0])
+        captionsFilterFile_name = "{}-captionsFilter.json".format(user.username)
+        captionsFilterFile_path = scraper.scrape_dir.joinpath(
+            "{}/{}".format(user.username, captionsFilterFile_name))
+
+        with open(captionsFilterFile_path, "w", encoding="utf-8") as captionsFilterFile:
+            json.dump(captionFilterData, captionsFilterFile, indent=2)
     except Exception as err:
         print(err)
         scraped_user.status = False
@@ -66,7 +77,7 @@ def scrape(user: User):
     else:
         scraped_user.status = scraped_medias[1]
         scraped_user.scraped_data = Scraped_Data(
-            data = filter_data(scraped_medias[0]),
+            data = captionFilterData,
             count = len(scraped_medias[0]),
             error = scraped_medias[2])
     finally:
