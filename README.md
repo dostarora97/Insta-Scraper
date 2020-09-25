@@ -24,9 +24,10 @@ python scraper.py
 ```
 
 # 2. Note:
-- Only public accounts are accesible
-- Only Captions can be scraped as of now. Check [To-Do](https://github.com/dostarora97/Insta-Scraper#3-to-do)
-- All data is saved in dir `Insta-Scraper/data/<username>`
+- Only public accounts are accessible
+- **Only Captions** can be scraped as of now in [**UI**](https://github.com/dostarora97/Insta-Scraper#11-web-ui). Check [To-Do](https://github.com/dostarora97/Insta-Scraper#3-to-do)
+- **All data** can be accessed through [CommandLine](https://github.com/dostarora97/Insta-Scraper#12-commandline)
+- All the scraped data is saved in directory `Insta-Scraper/data/<username>`
 
 # 3. To-Do:
 ## 3.1 Backend
